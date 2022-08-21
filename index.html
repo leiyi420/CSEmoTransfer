@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://leiyi420.github.io/HierarchicalEmoTTS/ -->
+<!-- saved from url=(0041)https://leiyi420.github.io/CSEmoTransfer/ -->
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
 
@@ -15,7 +15,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./index_files/style.css">
   </head>
   <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
     <section class="page-header">
@@ -34,10 +34,10 @@
 
 <h2>0. Contents</h2>
 <ol>
-  <li><a href="#abstract">Abstract</a></li>
-  <li><a href="#transfer">Examples of information perturbation</a></li>
-  <li><a href="#prediction">Demos -- Cross-speaker emotion transfer</a></li>
-  <li><a href="#control">Demos -- Generated audio examples from different branches</a></li>
+  <li><a href="https://leiyi420.github.io/CSEmoTransfer/#abstract">Abstract</a></li>
+  <li><a href="https://leiyi420.github.io/CSEmoTransfer/#transfer">Examples of information perturbation</a></li>
+  <li><a href="https://leiyi420.github.io/CSEmoTransfer/#prediction">Demos -- Cross-speaker emotion transfer</a></li>
+  <li><a href="https://leiyi420.github.io/CSEmoTransfer/#control">Demos -- Generated audio examples from different branches</a></li>
 
 </ol>
 
@@ -46,7 +46,7 @@
 <p> Cross-speaker emotion transfer is an effective way to produce expressive speech for neutral target speakers, which doesn't require emotional training data of target speakers. Since the emotion and timbre of the source speaker are heavily entangled, existing approaches often struggle to trade off the speaker similarity and the emotion expressions.
  In this paper, we propose to disentangle the timbre and the emotion of speech through information perturbation to conduct cross-speaker emotion transfer, which effectively learns the emotion expressions of the source speaker and maintains the timbre of the target neutral speakers. Specifically, we perturb the timbre and emotion information (e.g., formant and pitch) of source speech separately to obtain and model the emotion- and timbre-independent signals, based on which the proposed model could further produce emotional speech in the timbre of target speakers. Experiment results demonstrate that the proposed approach significantly outperforms the baseline models in terms of naturalness and similarity, indicating the effectiveness of information perturbation for cross-speaker emotion transfer.
  </p>
-	<center><img src='fig/architecture.jpg'></center>
+	<center><img src="./index_files/architecture.jpg"></center>
 <br><br>
 
 <h2> 2. Examples of information perturbation<a name="transfer"></a></h2>
@@ -140,8 +140,8 @@
   </thead>
   <tbody>
 	<tr>
-      <td style="text-align: left" rowspan=2>Neutral</td>
-      <td style="text-align: left" colspan=5>Text: 我很明白你的意思。(English: I know exactly what you mean.)</td>
+      <td style="text-align: left" rowspan="2">Neutral</td>
+      <td style="text-align: left" colspan="5">Text: 我很明白你的意思。(English: I know exactly what you mean.)</td>
 	</tr>
 	<tr>
 	  <td style="text-align: left"><audio src="samples/ref2/db6_neutral.wav" controls="" preload=""></audio></td>
@@ -152,8 +152,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db4_005274_0100.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Happy</td>
-      <td style="text-align: left" colspan=5>Text: 太棒了，风浩这种做法果然是有效。(English: Great! Feng Hao's practice is really effective.)</td>
+      <td style="text-align: left" rowspan="2">Happy</td>
+      <td style="text-align: left" colspan="5">Text: 太棒了，风浩这种做法果然是有效。(English: Great! Feng Hao's practice is really effective.)</td>
 	</tr>
 	<tr>
 	  <td style="text-align: left"><audio src="samples/ref2/db6_happy.wav" controls="" preload=""></audio></td>
@@ -164,8 +164,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_happy_210863_0101.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Angry</td>
-      <td style="text-align: left" colspan=5>Text: 很快穆先生就由恐惧滋生成了愤怒的情绪。(English: Mr. Mu became angry from fear very soon.)</td>
+      <td style="text-align: left" rowspan="2">Angry</td>
+      <td style="text-align: left" colspan="5">Text: 很快穆先生就由恐惧滋生成了愤怒的情绪。(English: Mr. Mu became angry from fear very soon.)</td>
 	</tr>
 	<tr>
 	  <td style="text-align: left"><audio src="samples/ref2/db6_angry.wav" controls="" preload=""></audio></td>
@@ -176,8 +176,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_angry_220253_0102.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Sad</td>
-      <td style="text-align: left" colspan=5>Text: 心痛到濒临疯狂，是谁告诉我要学会遗忘。(English: Heartache to the brink of madness, who told me to learn to forget.)</td>
+      <td style="text-align: left" rowspan="2">Sad</td>
+      <td style="text-align: left" colspan="5">Text: 心痛到濒临疯狂，是谁告诉我要学会遗忘。(English: Heartache to the brink of madness, who told me to learn to forget.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_sad.wav" controls="" preload=""></audio></td>
@@ -188,8 +188,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_sad_231056_0103.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Surprise</td>
-      <td style="text-align: left" colspan=5>Text: 我的手指头断了，竟然一点儿也没有感觉。(English: I broke my finger, but I didn't feel it at all.)</td>
+      <td style="text-align: left" rowspan="2">Surprise</td>
+      <td style="text-align: left" colspan="5">Text: 我的手指头断了，竟然一点儿也没有感觉。(English: I broke my finger, but I didn't feel it at all.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_surprise.wav" controls="" preload=""></audio></td>
@@ -200,8 +200,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_surprise_240927_0104.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
-      <td style="text-align: left" rowspan=2>Disgust</td>
-      <td style="text-align: left" colspan=5>Text: 心动不如行动，我不太擅长卖萌。(English: Action is better than thought. I'm not very good at being cute.)</td>
+      <td style="text-align: left" rowspan="2">Disgust</td>
+      <td style="text-align: left" colspan="5">Text: 心动不如行动，我不太擅长卖萌。(English: Action is better than thought. I'm not very good at being cute.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_disgust.wav" controls="" preload=""></audio></td>
@@ -233,8 +233,8 @@
   <tbody>
     
 	<tr>
-      <td style="text-align: left" rowspan=2>Neutral</td>
-      <td style="text-align: left" colspan=5>Text: 他希望能找个办法既能让这家伙吃苦头又不连累自己。(English: He hoped to find a way to make this guy suffer without harming himself.)</td>
+      <td style="text-align: left" rowspan="2">Neutral</td>
+      <td style="text-align: left" colspan="5">Text: 他希望能找个办法既能让这家伙吃苦头又不连累自己。(English: He hoped to find a way to make this guy suffer without harming himself.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_neutral.wav" controls="" preload=""></audio></td>
@@ -245,8 +245,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db2_016199_0000.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Happy</td>
-      <td style="text-align: left" colspan=5>Text: 戴老师他不是很高兴嘛？(English: Mr. Dai is very happy, isn't he?)</td>
+      <td style="text-align: left" rowspan="2">Happy</td>
+      <td style="text-align: left" colspan="5">Text: 戴老师他不是很高兴嘛？(English: Mr. Dai is very happy, isn't he?)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_happy.wav" controls="" preload=""></audio></td>
@@ -257,8 +257,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_happy_211202_0001.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Angry</td>
-      <td style="text-align: left" colspan=5>Text: 第一次打昏的时候，我是最愤怒的！(English: The first time I fainted, I was the angriest!)</td>
+      <td style="text-align: left" rowspan="2">Angry</td>
+      <td style="text-align: left" colspan="5">Text: 第一次打昏的时候，我是最愤怒的！(English: The first time I fainted, I was the angriest!)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_angry.wav" controls="" preload=""></audio></td>
@@ -269,8 +269,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_angry_220349_0002.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Sad</td>
-      <td style="text-align: left" colspan=5>Text: 求您给我一个改过自新的机会，以后我再也不去行骗了。(English: Please give me a chance to reform. I will never cheat again in the future.)</td>
+      <td style="text-align: left" rowspan="2">Sad</td>
+      <td style="text-align: left" colspan="5">Text: 求您给我一个改过自新的机会，以后我再也不去行骗了。(English: Please give me a chance to reform. I will never cheat again in the future.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_sad.wav" controls="" preload=""></audio></td>
@@ -281,8 +281,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_sad_230090_0003.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Surprise</td>
-      <td style="text-align: left" colspan=5>Text: 我的手指头断了，竟然一点儿也没有感觉。(English: I broke my finger, but I didn't feel it at all.)</td>
+      <td style="text-align: left" rowspan="2">Surprise</td>
+      <td style="text-align: left" colspan="5">Text: 我的手指头断了，竟然一点儿也没有感觉。(English: I broke my finger, but I didn't feel it at all.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_surprise.wav" controls="" preload=""></audio></td>
@@ -293,8 +293,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_surprise_240927_0004.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
-      <td style="text-align: left" rowspan=2>Disgust</td>
-      <td style="text-align: left" colspan=5>Text: 你是存在于世界的另一个我，如此憎恨却又无法摆脱。(English: You are another me in the world, so hated but unable to get rid of.)</td>
+      <td style="text-align: left" rowspan="2">Disgust</td>
+      <td style="text-align: left" colspan="5">Text: 你是存在于世界的另一个我，如此憎恨却又无法摆脱。(English: You are another me in the world, so hated but unable to get rid of.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_disgust.wav" controls="" preload=""></audio></td>
@@ -324,8 +324,8 @@
   <tbody>
     
 	<tr>
-      <td style="text-align: left" rowspan=2>Neutral</td>
-      <td style="text-align: left" colspan=5>Text: 预计今天下午到前半夜我市部分地区有雷阵雨。(English: It is expected that there will be thunderstorms in some areas of our city from this afternoon to the first midnight.)</td>
+      <td style="text-align: left" rowspan="2">Neutral</td>
+      <td style="text-align: left" colspan="5">Text: 预计今天下午到前半夜我市部分地区有雷阵雨。(English: It is expected that there will be thunderstorms in some areas of our city from this afternoon to the first midnight.)</td>
 	</tr>
 	<tr>
 	  <td style="text-align: left"><audio src="samples/ref2/db6_neutral.wav" controls="" preload=""></audio></td>
@@ -336,8 +336,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_neutral_014907_0300.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Happy</td>
-      <td style="text-align: left" colspan=5>Text: 又有新发现了，真是令人惊喜万分。(English: It's amazing to find something new.)</td>
+      <td style="text-align: left" rowspan="2">Happy</td>
+      <td style="text-align: left" colspan="5">Text: 又有新发现了，真是令人惊喜万分。(English: It's amazing to find something new.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_happy.wav" controls="" preload=""></audio></td>
@@ -348,8 +348,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_happy_210808_0301.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Angry</td>
-      <td style="text-align: left" colspan=5>Text: 住口，不要喊我父亲，我没有你这样的女儿！(English: Shut up, don't call my father, I don't have a daughter like you!)</td>
+      <td style="text-align: left" rowspan="2">Angry</td>
+      <td style="text-align: left" colspan="5">Text: 住口，不要喊我父亲，我没有你这样的女儿！(English: Shut up, don't call my father, I don't have a daughter like you!)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_angry.wav" controls="" preload=""></audio></td>
@@ -360,8 +360,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_angry_220442_0302.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Sad</td>
-      <td style="text-align: left" colspan=5>Text: 求您给我一个改过自新的机会，以后我再也不去行骗了。(English: Please give me a chance to reform. I will never cheat again in the future.)</td>
+      <td style="text-align: left" rowspan="2">Sad</td>
+      <td style="text-align: left" colspan="5">Text: 求您给我一个改过自新的机会，以后我再也不去行骗了。(English: Please give me a chance to reform. I will never cheat again in the future.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_sad.wav" controls="" preload=""></audio></td>
@@ -372,8 +372,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_sad_230090_0303.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left" rowspan=2>Surprise</td>
-      <td style="text-align: left" colspan=5>Text: 啊，是的是的。真是耳闻不如目见。天使呀，您来有什么话对我说？(English: Ah, yes, yes. Seeing is better than hearing. Angel, what do you want to say to me?)</td>
+      <td style="text-align: left" rowspan="2">Surprise</td>
+      <td style="text-align: left" colspan="5">Text: 啊，是的是的。真是耳闻不如目见。天使呀，您来有什么话对我说？(English: Ah, yes, yes. Seeing is better than hearing. Angel, what do you want to say to me?)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_surprise.wav" controls="" preload=""></audio></td>
@@ -384,8 +384,8 @@
 	  <td style="text-align: left"><audio src="samples/proposed/db6_surprise_241083_0304.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
-      <td style="text-align: left" rowspan=2>Disgust</td>
-      <td style="text-align: left" colspan=5>Text: 翁倩玉在赈灾晚会上演唱。(English: Weng Qianyu sang at the disaster relief party.)</td>
+      <td style="text-align: left" rowspan="2">Disgust</td>
+      <td style="text-align: left" colspan="5">Text: 翁倩玉在赈灾晚会上演唱。(English: Weng Qianyu sang at the disaster relief party.)</td>
 	</tr>
 	<tr>
       <td style="text-align: left"><audio src="samples/ref2/db6_disgust.wav" controls="" preload=""></audio></td>
@@ -414,6 +414,27 @@
     </tr>
   </thead>
   <tbody>
+  	<tr>
+	  <td style="text-align: left">F1</td>
+	  <td style="text-align: left">Neutral</td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db2_003489_0000_spk.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db2_003489_0000_emo.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db2_003489_0000.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">F2</td>
+	  <td style="text-align: left">Happy</td>
+	  <td style="text-align: left"><audio src="samples/branch_gen/db6_happy_211439_0301_spk.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_happy_211439_0301_emo.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_happy_211439_0301.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+	  <td style="text-align: left">F2</td>
+	  <td style="text-align: left">Angry</td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_angry_220442_0302_spk.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_angry_220442_0302_emo.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_angry_220442_0302.wav" controls="" preload=""></audio></td>
+    </tr>
 	<tr>
 	  <td style="text-align: left">F1</td>
 	  <td style="text-align: left">Sad</td>
@@ -422,11 +443,11 @@
       <td style="text-align: left"><audio src="samples/branch_gen/db6_sad_230090_0003.wav" controls="" preload=""></audio></td>
     </tr>
 	<tr>
-      <td style="text-align: left">F2</td>
-	  <td style="text-align: left">Happy</td>
-	  <td style="text-align: left"><audio src="samples/branch_gen/db6_happy_211439_0301_spk.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/branch_gen/db6_happy_211439_0301_emo.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/branch_gen/db6_happy_211439_0301.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left">Source speaker</td>
+	  <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_surprise_241334_0204_spk.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_surprise_241334_0204_emo.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/branch_gen/db6_surprise_241334_0204wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">M1</td>
@@ -448,4 +469,5 @@
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub Pages</a>.</span>
       </footer>
     </section>
+
 </body></html>
